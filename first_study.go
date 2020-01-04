@@ -188,6 +188,16 @@ func nextVal() func() int{
 		return i     //클로저
 	}
 }
+func nextVAL_exec(){
+	next:=nextVal()
+	fmt.Println(next())  //1
+	fmt.Println(next())  //2
+	fmt.Println(next())  //3
+
+	another :=nextVal()
+	fmt.Println(another) //1
+	fmt.Println(another) //2
+}
 
 //배열
 func array(){
@@ -213,17 +223,8 @@ func slice(){
 	len(b)
 	cap(b)   //capacity
 
-}
-func nextVAL_exec(){
-	next:=nextVal()
-	fmt.Println(next())  //1
-	fmt.Println(next())  //2
-	fmt.Println(next())  //3
+}//으어어러어렁 뇌정지
 
-	another :=nextVal()
-	fmt.Println(another) //1
-	fmt.Println(another) //2
-}
 func main() {
 	var a, b int
 	fmt.Scan(&a, &b)
