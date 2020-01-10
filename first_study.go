@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+
 //go 변수들은 초기화 안하면 0 value, bool은 false, string은 ""
 //var a int = 10
 var f float32 = 11.
@@ -190,6 +191,7 @@ func nextVal() func() int{
 }
 func nextVAL_exec(){
 	next:=nextVal()
+	//Go에서는 첫 문자가 대문자로 시작하면 그 패키지를 사용하는 곳에서 접근할 수 있는 exported name이 됨.(private, public)
 	fmt.Println(next())  //1
 	fmt.Println(next())  //2
 	fmt.Println(next())  //3
